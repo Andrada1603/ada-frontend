@@ -67,3 +67,7 @@ input[type='number'] {
 .has-error .form-help {
   @apply text-red-600 !important;
 }
+
+.form-container {
+  max-width: 35rem;
+}

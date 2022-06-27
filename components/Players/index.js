@@ -1,3 +1,4 @@
+import AddPlayerForm from './AddPlayerForm';
 import PlayersTable from './PlayersTable';
 
-export { PlayersTable };
+export { AddPlayerForm, PlayersTable };
