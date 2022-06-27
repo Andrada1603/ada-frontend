@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import { useQuery } from '../../hooks';
 
 const MatchesTable = () => {
@@ -17,7 +18,7 @@ const MatchesTable = () => {
             {player2.last_name}, {player2.first_name}
           </strong>
         </td>
-        <td>{date} </td>
+        <td>{format(new Date(date), 'dd-MM-yyyy')} </td>
         <td>{location.address}</td>
         <td>{match_type}</td>
         <td className="text-center py-0">
