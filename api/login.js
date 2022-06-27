@@ -8,14 +8,17 @@ const login = async (ref, data) => {
     data['g-recaptcha-response'] = await ref.current.executeAsync();
 
     const { token } = await axios.post('login', data);
-    if (!decode(token)) {
+    const decoded = decode(token);
+
+    if (!decoded) {
       throw new Error('Error! We cannot log you in at the moment');
     }
     store.dispatch({ type: 'SET', jwt: token });
 
     // notify user and other actions
     toaster.success('Login successful');
-    router.push('/admin');
+    const { role } = decoded;
+    router.push('/' + role);
   } catch (err) {
     toaster.error(err.message);
 
