@@ -15,7 +15,7 @@ const Page = () => (
       </div>
       <div>
         <PlayersTable />
-        <Fab title="Haules" href="/admin/players/add" icon="fa fa-plus-circle" />
+        <Fab title="Adaugă jucător" href="/admin/players/add" />
       </div>
     </main>
   </div>
