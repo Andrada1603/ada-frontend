@@ -1,5 +1,5 @@
 import { checkAuth, withAuth } from '../../../auth';
-import { Menu, MenuButton, Tooltip } from '../../../components';
+import { Fab, Menu, MenuButton, Tooltip } from '../../../components';
 import { MatchesTable } from '../../../components/Matches';
 
 const Page = () => (
@@ -15,6 +15,7 @@ const Page = () => (
       </div>
       <div>
         <MatchesTable />
+        <Fab title="Adaugă meci" href="/admin/matches/add" />
       </div>
     </main>
   </div>

@@ -1,12 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\components",
-    "\\pages",
+    "\\components\\Abonaments",
     "\\pages\\admin",
-    "\\pages\\admin\\areas",
+    "\\pages\\admin\\abonaments",
+    "\\pages\\admin\\lessons",
     "\\pages\\admin\\players",
-    "\\pages\\admin\\sports"
+    "\\pages\\admin\\sports",
+    "\\public",
+    "\\public\\images"
   ],
+  "SelectedNode": "\\public\\images\\logo (2).png",
   "PreviewInSolutionExplorer": false
 }

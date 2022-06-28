@@ -46,7 +46,7 @@ const AddAbonamentForm = () => {
           <Fieldset name="price" label="Pret">
             <Field placeholder="Pret" name="price" as={Input} />
           </Fieldset>
-          <Submit className="button full accent">Add</Submit>
+          <Submit className="button full primary">Adaugă</Submit>
         </Form>
       </Formik>
     </div>

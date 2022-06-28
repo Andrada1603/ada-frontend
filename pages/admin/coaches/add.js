@@ -14,6 +14,7 @@ const Page = () => (
         <MenuButton />
       </div>
       <div>
+        <h3 className="mb-6 text-primary font-semibold">Folosește formularul de mai jos pentru a adăuga un antrenor în baza de date.</h3>
         <AddCoachForm />
       </div>
     </main>

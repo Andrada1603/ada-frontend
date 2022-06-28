@@ -1,7 +1,7 @@
 module.exports = {
-  sitename: 'Your awesome site',
-  title: 'Your awesome site',
-  description: 'Lorem ipsum dolor sin amet',
+  sitename: 'CSU ASE',
+  title: 'CSU ASE',
+  description: 'Aplicatia ta pentru gestionarea clubului sportiv',
   baseurl: `${process.env.APP_BASE_URL}`,
   image: `${process.env.APP_BASE_URL}/images/logo.png`,
   stylesheets: [

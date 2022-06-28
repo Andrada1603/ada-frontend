@@ -55,7 +55,7 @@ const AddCoachForm = () => {
           <Fieldset name="salary" label="Salariu">
             <Field placeholder="Salariu" name="salary" as={Input} />
           </Fieldset>
-          <Submit className="button full accent">Add</Submit>
+          <Submit className="button full primary">Adaugă</Submit>
         </Form>
       </Formik>
     </div>

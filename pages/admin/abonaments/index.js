@@ -1,5 +1,5 @@
 import { checkAuth, withAuth } from '../../../auth';
-import { Menu, MenuButton, Tooltip } from '../../../components';
+import { Fab, Menu, MenuButton, Tooltip } from '../../../components';
 import { AbonamentsTable } from '../../../components/Abonaments';
 
 const Page = () => (
@@ -15,6 +15,7 @@ const Page = () => (
       </div>
       <div>
         <AbonamentsTable />
+        <Fab title="Adaugă abonament" href="/admin/abonaments/add" />
       </div>
     </main>
   </div>

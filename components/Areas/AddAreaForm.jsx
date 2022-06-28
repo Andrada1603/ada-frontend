@@ -43,7 +43,7 @@ const AddAreaForm = () => {
               <Field placeholder="Adresa" name="address" as={Input} />
             </Fieldset>
           </div>
-          <Submit className="button full accent">Add</Submit>
+          <Submit className="button full primary">Adaugă</Submit>
         </Form>
       </Formik>
     </div>

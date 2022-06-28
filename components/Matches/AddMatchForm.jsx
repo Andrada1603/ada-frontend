@@ -40,7 +40,7 @@ const AddMatchForm = () => {
           <Fieldset name="match_type" label="Tipul meciului/turneul">
             <Field placeholder="Tipul meciului/turneul" name="match_type" as={Input} />
           </Fieldset>
-          <Submit className="button full accent">Add</Submit>
+          <Submit className="button full primary">Adaugă</Submit>
         </Form>
       </Formik>
     </div>

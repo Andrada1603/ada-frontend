@@ -1,5 +1,5 @@
 import { checkAuth, withAuth } from '../../../auth';
-import { Menu, MenuButton, Tooltip } from '../../../components';
+import { Fab, Menu, MenuButton, Tooltip } from '../../../components';
 import { AreasTable } from '../../../components/Areas';
 
 const Page = () => (
@@ -15,6 +15,7 @@ const Page = () => (
       </div>
       <div>
         <AreasTable />
+        <Fab title="Adaugă sală" href="/admin/areas/add" />
       </div>
     </main>
   </div>

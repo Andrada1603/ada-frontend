@@ -46,7 +46,7 @@ const AddSportForm = () => {
             </Fieldset>
           </div>
 
-          <Submit className="button full accent">Add</Submit>
+          <Submit className="button full primary">Adaugă</Submit>
         </Form>
       </Formik>
     </div>
