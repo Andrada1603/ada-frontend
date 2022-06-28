@@ -1,8 +1,17 @@
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { AreYouSure } from '.';
+import { toaster } from '../lib';
 
-const DeleteRow = ({ onClick }) => {
+const DeleteRow = ({ action, id }) => {
+  const router = useRouter();
   const [isOpen, setOpen] = useState(false);
+
+  const deleteRow = async () => {
+    await action(id);
+    router.reload();
+    toaster.success('Succes!');
+  };
 
   const hide = () => {
     setOpen(false);
@@ -13,9 +22,7 @@ const DeleteRow = ({ onClick }) => {
 
   const iAmSure = () => {
     hide();
-    if (onClick && typeof onClick === 'function') {
-      onClick();
-    }
+    deleteRow();
   };
 
   return (
