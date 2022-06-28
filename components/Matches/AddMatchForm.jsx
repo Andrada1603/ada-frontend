@@ -33,9 +33,6 @@ const AddMatchForm = () => {
               <Field placeholder="Data" name="date" as={Datepicker} />
             </Fieldset>
             <AreaSelect />
-            {/* <Fieldset name="location" label="Locatia">
-              <Field placeholder="Locatia" name="location" as={Input} />
-            </Fieldset> */}
           </div>
           <Fieldset name="arbiter_name" label="Arbitrul">
             <Field placeholder="Arbitrul" name="arbiter_name" as={Input} />

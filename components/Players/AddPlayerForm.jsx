@@ -49,7 +49,7 @@ const AddPlayerForm = () => {
           <Fieldset name="category" label="Categorie">
             <Field placeholder="Categorie" name="category" as={Input} />
           </Fieldset>
-          <Submit className="button full accent">Add</Submit>
+          <Submit className="button full primary">Adaugă</Submit>
         </Form>
       </Formik>
     </div>
