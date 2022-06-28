@@ -6,11 +6,15 @@ import Dropdown from './Dropdown';
 const CoachSelect = () => {
   const { setFieldValue } = useFormikContext();
   const { data: coaches, status } = useQuery('/coaches');
-  const showCoach = ({ _id, first_name, last_name }) => (
-    <option key={`coach_${_id}`} value={_id}>
-      {last_name}, {first_name}
-    </option>
-  );
+
+  const showCoach = ({ _id, first_name, last_name }) => {
+    const displayName = `${last_name}, ${first_name}`;
+    return (
+      <option key={`coach_${_id}`} value={_id}>
+        {displayName}
+      </option>
+    );
+  };
 
   const handleChange = (value) => {
     setFieldValue('coach', value);

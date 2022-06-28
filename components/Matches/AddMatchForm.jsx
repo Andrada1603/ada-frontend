@@ -1,5 +1,5 @@
 import { Formik, Form, Field } from 'formik';
-import { Input, PlayerSelect } from '../Fields';
+import { AreaSelect, Input, PlayerSelect } from '../Fields';
 import { Datepicker, Fieldset, Submit } from '../Formik';
 import { validationSchema, initialValues } from '../../models/match';
 import { createMatch } from '../../api/match';
@@ -32,9 +32,10 @@ const AddMatchForm = () => {
             <Fieldset name="date" label="Data">
               <Field placeholder="Data" name="date" as={Datepicker} />
             </Fieldset>
-            <Fieldset name="location" label="Locatia">
+            <AreaSelect />
+            {/* <Fieldset name="location" label="Locatia">
               <Field placeholder="Locatia" name="location" as={Input} />
-            </Fieldset>
+            </Fieldset> */}
           </div>
           <Fieldset name="arbiter_name" label="Arbitrul">
             <Field placeholder="Arbitrul" name="arbiter_name" as={Input} />

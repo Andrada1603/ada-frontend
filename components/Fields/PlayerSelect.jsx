@@ -7,11 +7,14 @@ const PlayerSelect = ({ name = 'player', label = 'Jucător' }) => {
   const { setFieldValue } = useFormikContext();
   const { data: players, status } = useQuery('/players');
 
-  const showPlayer = ({ _id, first_name, last_name }) => (
-    <option key={`player-${name}_${_id}`} value={_id}>
-      {last_name}, {first_name}
-    </option>
-  );
+  const showPlayer = ({ _id, first_name, last_name }) => {
+    const displayName = `${last_name}, ${first_name}`;
+    return (
+      <option key={`player-${name}_${_id}`} value={_id}>
+        {displayName}
+      </option>
+    );
+  };
 
   const handleChange = (value) => {
     setFieldValue('player', value);

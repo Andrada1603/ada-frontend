@@ -1,3 +1,4 @@
+import AreaSelect from './AreaSelect';
 import Checkbox from './Checkbox';
 import CoachSelect from './CoachSelect';
 import Combobox from './Combobox';
@@ -19,6 +20,7 @@ import Submit from './Submit';
 import Textarea from './Textarea';
 
 export {
+  AreaSelect,
   Checkbox,
   CoachSelect,
   Combobox,
