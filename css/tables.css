@@ -1,11 +1,14 @@
 table {
   width: 100%;
   border-radius: 15px;
+  box-shadow: 0px 0px 36px 15px rgba(0, 0, 0, 0.28);
 }
 
 thead {
   background: white;
   font-size: 1.15rem;
+  text-align: center;
+  column-rule: 1px solid black;
 }
 
 table th,
@@ -17,14 +20,15 @@ tbody > tr {
   cursor: pointer;
 }
 
-tbody > tr:hover {
-  background: #ddd;
-}
+  tbody > tr:hover {
+    background: #8BC2F8;
+  }
 
-tbody > tr i {
-  font-size: 1.25rem;
-  transition: color .2s ease-in-out;
-}
+  tbody > tr i {
+    font-size: 1.25rem;
+    transition: color .2s ease-in-out;
+    color: white;
+  }
 
 tbody > tr:hover i {
   visibility: visible !important;
@@ -34,6 +38,11 @@ tbody > tr i:hover {
   color: red;
 }
 
-tbody > tr:nth-child(odd) {
-  background: #ddd;
+tr:nth-child(odd) {
+  background: #C5E0FC;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background: #ECF4FE;
+  text-align: center;
 }

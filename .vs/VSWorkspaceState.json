@@ -2,14 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\components\\Abonaments",
-    "\\pages\\admin",
-    "\\pages\\admin\\abonaments",
-    "\\pages\\admin\\lessons",
-    "\\pages\\admin\\players",
-    "\\pages\\admin\\sports",
-    "\\public",
-    "\\public\\images"
+    "\\components\\Areas",
+    "\\components\\Coaches",
+    "\\css"
   ],
-  "SelectedNode": "\\public\\images\\logo (2).png",
+  "SelectedNode": "\\css\\buttons.css",
   "PreviewInSolutionExplorer": false
 }
