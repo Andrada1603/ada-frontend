@@ -1,5 +1,5 @@
 import { checkAuth, withAuth } from '../../../auth';
-import { Menu, MenuButton, Tooltip } from '../../../components';
+import { Fab, Menu, MenuButton, Tooltip } from '../../../components';
 import { PlayersTable } from '../../../components/Players';
 
 const Page = () => (
@@ -15,6 +15,7 @@ const Page = () => (
       </div>
       <div>
         <PlayersTable />
+        <Fab title="Haules" href="/admin/players/add" icon="fa fa-plus-circle" />
       </div>
     </main>
   </div>

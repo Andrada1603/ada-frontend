@@ -4,64 +4,35 @@ export default [
     href: '/admin',
   },
   {
-    name: 'My todos',
-    href: '/examples/todos',
+    name: 'Jucători',
+    href: '/admin/players',
   },
   {
-    name: 'Profile',
-    href: '/examples/profile',
+    name: 'Antrenori',
+    href: '/admin/coaches',
   },
   {
-    name: 'Multistep form',
-    href: '/examples/multi-step',
+    name: 'Sporturi',
+    href: '/admin/sports',
   },
   {
-    name: 'Components',
-    items: [
-      {
-        name: 'Buttons',
-        href: '/examples/buttons',
-      },
-      {
-        name: 'Dropdown',
-        href: '/examples/dropdown',
-      },
-      {
-        name: 'Combobox',
-        href: '/examples/combobox',
-      },
-      {
-        name: 'Modals',
-        href: '/examples/modals',
-      },
-      {
-        name: 'Overflow',
-        href: '/examples/overflow',
-      },
-      {
-        name: 'Pills',
-        href: '/examples/pill',
-      },
-      {
-        name: 'Show more',
-        href: '/examples/show-more',
-      },
-      {
-        name: 'Forms',
-        href: '/examples/forms',
-      },
-    ],
+    name: 'Abonamente',
+    href: '/admin/abonaments',
   },
   {
-    name: 'Login page',
-    href: '/login',
+    name: 'Săli',
+    href: '/admin/areas',
   },
   {
-    name: 'Signup page',
-    href: '/signup',
+    name: 'Lecții',
+    href: '/admin/lessons',
   },
   {
-    name: '404 Page',
-    href: '/404',
+    name: 'Meciuri',
+    href: '/admin/matches',
   },
+  {
+    name: 'Profil',
+    href: '/admin/profile'
+  }
 ];

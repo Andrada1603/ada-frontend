@@ -2,6 +2,7 @@ import AppHead from './AppHead';
 import AreYouSure from './AreYouSure';
 import Button from './Button';
 import EmailMask from './EmailMask';
+import Fab from './Fab';
 import Favicon from './Favicon';
 import Layout from './Layout';
 import Link from './Link';
@@ -36,6 +37,7 @@ export {
   AreYouSure,
   Button,
   EmailMask,
+  Fab,
   Favicon,
   Layout,
   Link,
