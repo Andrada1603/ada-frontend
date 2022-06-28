@@ -21,19 +21,18 @@ const CoachSelect = () => {
   };
 
   return (
-    status === 'success' && (
-      <Fieldset name="coach" label="Antrenor">
-        <Field
-          id="coach"
-          name="coach"
-          placeholder="Selectează antrenorul"
-          as={Dropdown}
-          onSelect={handleChange}
-        >
-          {coaches?.pages?.map(showCoach)}
-        </Field>
-      </Fieldset>
-    )
+    <Fieldset name="coach" label="Antrenor">
+      <Field
+        id="coach"
+        name="coach"
+        placeholder="Selectează antrenorul"
+        as={Dropdown}
+        onSelect={handleChange}
+      >
+        {status === 'success' && coaches?.pages?.map(showCoach)}
+        {status === 'loading' && 'Loading...'}
+      </Field>
+    </Fieldset>
   );
 };
 
