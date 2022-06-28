@@ -5,7 +5,7 @@ import OptionList from './OptionList';
 const Dropdown = ({ children, onSelect, defaultSelected, placeholder }) => {
   const items = useChildren(children);
   const downshift = useSelect({ items, onSelect, defaultSelected });
-  console.log(downshift?.selectedItem)
+
   return (
     <div className="relative">
       <div
