@@ -5,14 +5,14 @@ const AreYouSure = ({ isOpen, hide, iAmSure, children }) => {
   return (
     <Modal centered show={isOpen} onHide={hide}>
       <Modal.Header closeButton>
-        <Modal.Title>Confirm operation</Modal.Title>
+        <Modal.Title>Confirmă ștergerea</Modal.Title>
       </Modal.Header>
       <Modal.Body>{children}</Modal.Body>
       <Modal.Footer>
-        <Button className="button square accent" onClick={hide}>
+        <Button className="button square primary" onClick={hide}>
           Go back
         </Button>
-        <Button className="button full primary" onClick={iAmSure}>
+        <Button className="button full accent" onClick={iAmSure}>
           Delete
         </Button>
       </Modal.Footer>

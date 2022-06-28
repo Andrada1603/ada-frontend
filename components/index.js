@@ -1,6 +1,7 @@
 import AppHead from './AppHead';
 import AreYouSure from './AreYouSure';
 import Button from './Button';
+import DeleteRow from './DeleteRow';
 import EmailMask from './EmailMask';
 import Fab from './Fab';
 import Favicon from './Favicon';
@@ -36,6 +37,7 @@ export {
   AppHead,
   AreYouSure,
   Button,
+  DeleteRow,
   EmailMask,
   Fab,
   Favicon,

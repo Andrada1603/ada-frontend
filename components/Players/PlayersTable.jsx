@@ -1,4 +1,5 @@
 import { useQuery } from '../../hooks';
+import DeleteRow from '../DeleteRow';
 
 const PlayersTable = () => {
   const { data } = useQuery(`/players`);
@@ -16,7 +17,7 @@ const PlayersTable = () => {
         <td>{category}</td>
         <td>{email}</td>
         <td className="text-center py-0">
-          <i className="fa fa-trash invisible" />
+          <DeleteRow />
         </td>
       </tr>
     );
