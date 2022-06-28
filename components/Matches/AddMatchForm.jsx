@@ -26,18 +26,7 @@ const AddMatchForm = () => {
         <Form className="flex gap-4 flex-col">
           <div className="grid grid-cols-2 gap-4">
             <PlayerSelect label="Primul jucător" name="player1" />
-            {/* <Fieldset name="player1" label="Jucator1">
-              <Field
-                id="player1"
-                placeholder="Jucator1"
-                name="player1"
-                as={Input}
-                autoFocus
-              />
-            </Fieldset> */}
-            <Fieldset name="player2" label="Jucator2">
-              <Field id="player2" placeholder="Jucator2" name="player2" as={Input} autoFocus />
-            </Fieldset>
+            <PlayerSelect label="Al doilea jucător" name="player2" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Fieldset name="date" label="Data">
