@@ -9,6 +9,7 @@ import Fieldset from './Fieldset';
 import Input from './Input';
 import Number from './Number';
 import Password from './Password';
+import PlayerSelect from './PlayerSelect';
 import Radio from './Radio';
 import RadioContext from './RadioContext';
 import RadioGroup from './RadioGroup';
@@ -29,6 +30,7 @@ export {
   Input,
   Number,
   Password,
+  PlayerSelect,
   Radio,
   RadioContext,
   RadioGroup,

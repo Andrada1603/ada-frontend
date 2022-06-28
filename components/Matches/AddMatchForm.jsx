@@ -1,5 +1,5 @@
 import { Formik, Form, Field } from 'formik';
-import { Input } from '../Fields';
+import { Input, PlayerSelect } from '../Fields';
 import { Datepicker, Fieldset, Submit } from '../Formik';
 import { validationSchema, initialValues } from '../../models/match';
 import { createMatch } from '../../api/match';
@@ -10,7 +10,7 @@ const AddMatchForm = () => {
     try {
       await createMatch(data);
       toaster.success('Meciul a fost creat');
-      router.push('/admin/matches')
+      router.push('/admin/matches');
     } catch (err) {
       toaster.error('Meciul nu a putut fi creat.');
     }
@@ -25,7 +25,8 @@ const AddMatchForm = () => {
       >
         <Form className="flex gap-4 flex-col">
           <div className="grid grid-cols-2 gap-4">
-            <Fieldset name="player1" label="Jucator1">
+            <PlayerSelect label="Primul jucător" name="player1" />
+            {/* <Fieldset name="player1" label="Jucator1">
               <Field
                 id="player1"
                 placeholder="Jucator1"
@@ -33,7 +34,7 @@ const AddMatchForm = () => {
                 as={Input}
                 autoFocus
               />
-            </Fieldset>
+            </Fieldset> */}
             <Fieldset name="player2" label="Jucator2">
               <Field id="player2" placeholder="Jucator2" name="player2" as={Input} autoFocus />
             </Fieldset>

@@ -14,7 +14,7 @@ const Dropdown = ({ children, onSelect, defaultSelected, placeholder }) => {
       >
         <input
           value={downshift?.selectedItem?.label.join('') || placeholder}
-          className="-my-2 outline-none w-full bg-transparent"
+          className="-my-2 outline-none w-full bg-transparent py-2.5 text-form"
           readOnly={true}
         />
         <span>
