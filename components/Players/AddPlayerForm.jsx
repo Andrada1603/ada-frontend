@@ -1,20 +1,27 @@
 import { Formik, Form, Field } from 'formik';
-import { Input } from '../Fields';
+import { Input, Select } from '../Fields';
 import { Datepicker, Fieldset, Submit } from '../Formik';
 import { validationSchema, initialValues } from '../../models/player';
 import { createPlayer } from '../../api/player';
 import { router, toaster } from '../../lib';
+import { playerCategories } from '../../data';
 
 const AddPlayerForm = () => {
   const handleSubmit = async (data) => {
     try {
       await createPlayer(data);
       toaster.success('Jucătorul a fost creat');
-      router.push('/admin/players')
+      router.push('/admin/players');
     } catch (err) {
       toaster.error('Jucătorul nu a putut fi creat.');
     }
   };
+
+  const showPlayerCategory = ({ name, value }) => (
+    <option value={value} key={`player-cat-${value}`}>
+      {name}
+    </option>
+  );
 
   return (
     <div className="form-container">
@@ -47,7 +54,9 @@ const AddPlayerForm = () => {
             </Fieldset>
           </div>
           <Fieldset name="category" label="Categorie">
-            <Field placeholder="Categorie" name="category" as={Input} />
+            <Field placeholder="Categorie" name="category" as={Select}>
+              {playerCategories.map(showPlayerCategory)}
+            </Field>
           </Fieldset>
           <Submit className="button full primary">Adaugă</Submit>
         </Form>
