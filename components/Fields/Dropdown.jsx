@@ -5,7 +5,7 @@ import OptionList from './OptionList';
 const Dropdown = ({ children, onSelect, defaultSelected, placeholder }) => {
   const items = useChildren(children);
   const downshift = useSelect({ items, onSelect, defaultSelected });
-
+  console.log(downshift?.selectedItem)
   return (
     <div className="relative">
       <div
@@ -13,7 +13,7 @@ const Dropdown = ({ children, onSelect, defaultSelected, placeholder }) => {
         {...downshift.getToggleButtonProps()}
       >
         <input
-          value={downshift?.selectedItem?.label || placeholder}
+          value={downshift?.selectedItem?.label.join('') || placeholder}
           className="-my-2 outline-none w-full bg-transparent"
           readOnly={true}
         />

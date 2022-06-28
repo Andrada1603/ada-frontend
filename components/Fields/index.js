@@ -1,4 +1,5 @@
 import Checkbox from './Checkbox';
+import CoachSelect from './CoachSelect';
 import Combobox from './Combobox';
 import Datepicker from './Datepicker';
 import Dropdown from './Dropdown';
@@ -18,6 +19,7 @@ import Textarea from './Textarea';
 
 export {
   Checkbox,
+  CoachSelect,
   Combobox,
   Datepicker,
   Dropdown,

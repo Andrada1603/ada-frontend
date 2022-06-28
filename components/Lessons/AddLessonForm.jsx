@@ -1,5 +1,5 @@
 import { Formik, Form, Field } from 'formik';
-import { Input } from '../Fields';
+import { CoachSelect, Input } from '../Fields';
 import { Datepicker, Fieldset, Submit } from '../Formik';
 import { validationSchema, initialValues } from '../../models/lesson';
 import { createLesson } from '../../api/lesson';
@@ -28,18 +28,19 @@ const AddLessonForm = () => {
             <Fieldset name="name" label="Titlu lectie">
               <Field
                 id="name"
-                placeholder="Titlu lectiei"
+                placeholder="Titlul lectiei"
                 name="name"
                 as={Input}
                 autoFocus
               />
             </Fieldset>
-            <Fieldset name="coach" label="Antrenor">
+            <CoachSelect />
+            {/* <Fieldset name="coach" label="Antrenor">
               <Field id="coach"
                 placeholder="Antrenor"
                 name="coach"
                 as={Input} autoFocus />
-            </Fieldset>
+            </Fieldset> */}
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Fieldset name="date" label="Data lectiei">
