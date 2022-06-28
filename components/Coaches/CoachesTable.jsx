@@ -1,9 +1,11 @@
+import { deleteCoach } from '../../api/coach';
 import { useQuery } from '../../hooks';
+import DeleteRow from '../DeleteRow';
 
 const CoachesTable = () => {
   const { data } = useQuery(`/coaches`);
 
-  const renderCoach = ({ first_name, last_name, email, coach_category, salary }, index) => {
+  const renderCoach = ({_id, first_name, last_name, email, coach_category, salary }, index) => {
     return (
       <tr key={`player-${first_name}-${last_name}`}>
         <td>{index + 1}</td>
@@ -16,7 +18,7 @@ const CoachesTable = () => {
         <td>{coach_category}</td>
         <td>{salary} LEI</td>
         <td className="text-center py-0">
-          <i className="fa fa-trash invisible" />
+          <DeleteRow id={_id} action={deleteCoach} />
         </td>
       </tr>
     );

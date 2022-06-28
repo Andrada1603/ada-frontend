@@ -1,10 +1,12 @@
+import { deleteMatch } from '../../api/match';
 import { format } from 'date-fns';
 import { useQuery } from '../../hooks';
+import DeleteRow from '../DeleteRow';
 
 const MatchesTable = () => {
   const { data } = useQuery(`/matches`);
 
-  const renderMatch = ({ player1, player2, date, location, match_type }, index) => {
+  const renderMatch = ({_id, player1, player2, date, location, match_type }, index) => {
     return (
       <tr key={`player1-${player1}player2-${player2}`}>
         <td>{index + 1}</td>
@@ -22,7 +24,7 @@ const MatchesTable = () => {
         <td>{location.address}</td>
         <td>{match_type}</td>
         <td className="text-center py-0">
-          <i className="fa fa-trash invisible" />
+          <DeleteRow id={_id} action={deleteMatch} />
         </td>
       </tr>
     );

@@ -26,7 +26,7 @@ const AddMatchForm = () => {
         <Form className="flex gap-4 flex-col">
           <div className="grid grid-cols-2 gap-4">
             <PlayerSelect label="Primul jucător" name="player1" />
-            <PlayerSelect label="Al doilea jucător" name="player2" />
+            <PlayerSelect label="Al doilea jucător" name="player2" autoFocus/>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Fieldset name="date" label="Data">
@@ -35,7 +35,7 @@ const AddMatchForm = () => {
             <AreaSelect />
           </div>
           <Fieldset name="arbiter_name" label="Arbitrul">
-            <Field placeholder="Arbitrul" name="arbiter_name" as={Input} />
+            <Field placeholder="Arbitrul" name="arbiter_name" as={Input}  />
           </Fieldset>
           <Fieldset name="match_type" label="Tipul meciului/turneul">
             <Field placeholder="Tipul meciului/turneul" name="match_type" as={Input} />

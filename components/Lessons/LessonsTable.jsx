@@ -1,10 +1,12 @@
+import { deleteLesson } from '../../api/lesson';
 import { useQuery } from '../../hooks';
 import { format } from 'date-fns';
+import DeleteRow from '../DeleteRow';
 
 const LessonsTable = () => {
   const { data } = useQuery(`/lessons`);
 
-  const renderLesson = ({ name, coach, date, location }, index) => {
+  const renderLesson = ({ _id, name, coach, date, location }, index) => {
     console.log(coach);
     return (
       <tr key={`area-${name}`}>
@@ -18,7 +20,7 @@ const LessonsTable = () => {
         <td>{format(new Date(date), 'dd-MM-yyyy')} </td>
         <td>{location.address}</td>
         <td className="text-center py-0">
-          <i className="fa fa-trash invisible" />
+          <DeleteRow id={_id} action={deleteLesson} />
         </td>
       </tr>
     );

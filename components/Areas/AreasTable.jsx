@@ -1,9 +1,11 @@
+import { deleteArea } from '../../api/area';
 import { useQuery } from '../../hooks';
+import DeleteRow from '../DeleteRow';
 
 const AreasTable = () => {
   const { data } = useQuery(`/areas`);
 
-  const renderArea = ({ name, address, dimension}, index) => {
+  const renderArea = ({_id, name, address, dimension}, index) => {
     return (
       <tr key={`area-${name}`}>
         <td>{index + 1}</td>
@@ -15,7 +17,7 @@ const AreasTable = () => {
         <td>{address}</td>
         <td>{dimension} mp</td>
         <td className="text-center py-0">
-          <i className="fa fa-trash invisible" />
+          <DeleteRow id={_id} action={deleteArea} />
         </td>
       </tr>
     );

@@ -1,10 +1,12 @@
+import { deleteSport } from '../../api/sport';
 import { format } from 'date-fns';
 import { useQuery } from '../../hooks';
+import DeleteRow from '../DeleteRow';
 
 const SportsTable = () => {
   const { data } = useQuery(`/sports`);
 
-  const renderSport = ({ name, manager_name, foundation_date}, index) => {
+  const renderSport = ({_id, name, manager_name, foundation_date}, index) => {
     return (
       <tr key={`sport-${name}`}>
         <td>{index + 1}</td>
@@ -16,7 +18,7 @@ const SportsTable = () => {
         <td>{manager_name}</td>
         <td>{format(new Date(foundation_date), 'dd-MM-yyyy')}</td>
         <td className="text-center py-0">
-          <i className="fa fa-trash invisible" />
+          <DeleteRow id={_id} action={deleteSport} />
         </td>
       </tr>
     );
