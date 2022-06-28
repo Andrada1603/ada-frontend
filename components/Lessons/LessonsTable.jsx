@@ -1,4 +1,5 @@
 import { useQuery } from '../../hooks';
+import { format } from 'date-fns';
 
 const LessonsTable = () => {
   const { data } = useQuery(`/lessons`);
@@ -14,7 +15,7 @@ const LessonsTable = () => {
           </strong>
         </td>
         <td>{coach.last_name}, {coach.first_name} </td>
-        <td>{date} </td>
+        <td>{format(new Date(date), 'dd-MM-yyyy')} </td>
         <td>{location.address}</td>
         <td className="text-center py-0">
           <i className="fa fa-trash invisible" />

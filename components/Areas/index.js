@@ -1,3 +1,4 @@
 import AreasTable from './AreasTable';
+import AddAreaForm from './AddAreaForm';
 
-export { AreasTable };
+export { AddAreaForm, AreasTable };

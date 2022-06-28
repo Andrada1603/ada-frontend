@@ -1,3 +1,4 @@
+import AddMatchForm from './AddMatchForm';
 import MatchesTable from './MatchesTable';
 
-export { MatchesTable };
+export { AddMatchForm, MatchesTable };

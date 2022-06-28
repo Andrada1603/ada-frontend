@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import { useQuery } from '../../hooks';
 
 const SportsTable = () => {
@@ -13,7 +14,7 @@ const SportsTable = () => {
           </strong>
         </td>
         <td>{manager_name}</td>
-        <td>{new Date(foundation_date).getMonth()}.{new Date(foundation_date).getFullYear()}</td>
+        <td>{format(new Date(foundation_date), 'dd-MM-yyyy')}</td>
         <td className="text-center py-0">
           <i className="fa fa-trash invisible" />
         </td>

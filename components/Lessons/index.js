@@ -1,3 +1,5 @@
+import AddLessonForm from './AddLessonForm';
 import LessonsTable from './LessonsTable';
 
-export { LessonsTable };
+
+export { AddLessonForm, LessonsTable };
