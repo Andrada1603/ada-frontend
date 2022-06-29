@@ -10,3 +10,4 @@
 8. Pages for client, not admin
 9. Page for joining a lesson
 10. Loading states for all elements, including tables and universal dropdowns
+11. Dashboard page

@@ -31,8 +31,4 @@ export default [
     name: 'Meciuri',
     href: '/admin/matches',
   },
-  {
-    name: 'Profil',
-    href: '/admin/profile'
-  }
 ];
