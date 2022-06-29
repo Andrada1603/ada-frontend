@@ -35,10 +35,10 @@ const MatchesTable = () => {
       <table>
         <thead>
           <th>#</th>
-          <th>Echipa gazda</th>
+          <th>Echipa gazdă</th>
           <th>Echipa vizitator</th>
           <th>Data</th>
-          <th>Locatie</th>
+          <th>Locație</th>
           <th>Sportul</th>
           <th></th>
         </thead>

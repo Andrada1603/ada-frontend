@@ -31,9 +31,9 @@ const AbonamentsTable = () => {
         <thead>
           <th>#</th>
           <th>Tip abonament</th>
-          <th>Data inceput</th>
+          <th>Data început</th>
           <th>Perioada</th>
-          <th>Pret</th>
+          <th>Preț</th>
           <th></th>
         </thead>
         <tbody>{data?.pages.map(renderArea)}</tbody>

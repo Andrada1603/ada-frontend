@@ -1,15 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\components\\Fields",
-    "\\components\\Lessons",
-    "\\components\\Matches",
-    "\\data",
     "\\models",
-    "\\pages",
-    "\\pages\\admin",
-    "\\pages\\admin\\matches"
+    "\\pages"
   ],
-  "SelectedNode": "\\data\\player-categories.js",
+  "SelectedNode": "\\models\\match.js",
   "PreviewInSolutionExplorer": false
 }

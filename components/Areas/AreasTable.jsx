@@ -29,7 +29,7 @@ const AreasTable = () => {
         <thead>
           <th>#</th>
           <th>Denumire</th>
-          <th>Adresa</th>
+          <th>Adresă</th>
           <th>Dimensiune</th>
           <th></th>
         </thead>

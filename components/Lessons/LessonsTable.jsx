@@ -31,10 +31,10 @@ const LessonsTable = () => {
       <table>
         <thead>
           <th>#</th>
-          <th>Titlu lectie</th>
+          <th>Titlu lecție</th>
           <th>Antrenor</th>
           <th>Data</th>
-          <th>Locatie</th>
+          <th>Locație</th>
           <th></th>
         </thead>
         <tbody>{data?.pages.map(renderLesson)}</tbody>

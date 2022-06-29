@@ -9,10 +9,10 @@ const AddAreaForm = () => {
   const handleSubmit = async (data) => {
     try {
       await createArea(data);
-      toaster.success('Sala a fost creata');
+      toaster.success('Sala a fost creată');
       router.push('/admin/areas')
     } catch (err) {
-      toaster.error('Sala nu a putut fi creata.');
+      toaster.error('Sala nu a putut fi creată.');
     }
   };
 

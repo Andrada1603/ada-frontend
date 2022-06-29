@@ -46,8 +46,8 @@ const AddPlayerForm = () => {
             </Fieldset>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <Fieldset name="birthday" label="Data nasterii">
-              <Field placeholder="Data nasterii" name="birthday" as={Datepicker} />
+            <Fieldset name="birthday" label="Data nașterii">
+              <Field placeholder="Data nașterii" name="birthday" as={Datepicker} />
             </Fieldset>
             <Fieldset name="email" label="Adresa de e-mail">
               <Field placeholder="Adresa de e-mail" name="email" as={Input} />
