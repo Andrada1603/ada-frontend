@@ -1,13 +1,17 @@
+import { useRouter } from 'next/router';
 import { deletePlayer } from '../../api/player';
 import { useQuery } from '../../hooks';
 import DeleteRow from '../DeleteRow';
 
 const PlayersTable = () => {
+  const router = useRouter();
   const { data } = useQuery(`/players`);
 
   const renderPlayer = ({ _id, first_name, last_name, birthday, email, category }, index) => {
+    const handleClick = (id) => router.push(`/admin/players/${id}`)
+
     return (
-      <tr key={`player-${first_name}-${last_name}`}>
+      <tr key={`player-${first_name}-${last_name}`} onClick={() => handleClick(_id)}>
         <td>{index + 1}</td>
         <td>
           <strong>
