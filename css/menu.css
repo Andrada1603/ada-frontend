@@ -44,3 +44,9 @@
     visibility: visible;
   }
 }
+
+.nav-menu .item-active {
+  background-color: #095093;
+  color: white !important;
+  font-weight: 500;
+}
