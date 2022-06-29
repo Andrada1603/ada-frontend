@@ -9,10 +9,10 @@ const AddSportForm = () => {
   const handleSubmit = async (data) => {
     try {
       await createSport(data);
-      toaster.success('Sectia sportiva a fost creata');
+      toaster.success('Secția sportivă a fost creată');
       router.push('/admin/sports')
     } catch (err) {
-      toaster.error('Sectie sportiva nu a putut fi creata.');
+      toaster.error('Secție sportivă nu a putut fi creată.');
     }
   };
 
@@ -41,8 +41,8 @@ const AddSportForm = () => {
             </Fieldset>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <Fieldset name="foundation_date" label="Data infintarii">
-              <Field placeholder="Data infintarii" name="foundation_date" as={Datepicker} />
+            <Fieldset name="foundation_date" label="Data înfințării secției">
+              <Field placeholder="Data înfințării secției" name="foundation_date" as={Datepicker} />
             </Fieldset>
           </div>
 

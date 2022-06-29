@@ -9,10 +9,10 @@ const AddLessonForm = () => {
   const handleSubmit = async (data) => {
     try {
       await createLesson(data);
-      toaster.success('Lectia a fost creata');
+      toaster.success('Lecția a fost creată');
       router.push('/admin/lessons')
     } catch (err) {
-      toaster.error('Lectia nu a putut fi creata.');
+      toaster.error('Lecția nu a putut fi creată.');
     }
   };
 
@@ -28,7 +28,7 @@ const AddLessonForm = () => {
             <Fieldset name="name" label="Titlu lectie">
               <Field
                 id="name"
-                placeholder="Titlul lectiei"
+                placeholder="Titlul lecției"
                 name="name"
                 as={Input}
                 autoFocus

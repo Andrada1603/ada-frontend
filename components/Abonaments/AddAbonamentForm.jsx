@@ -36,15 +36,15 @@ const AddAbonamentForm = () => {
             </Fieldset>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <Fieldset name="starting_date" label="Data de inceput">
-              <Field placeholder="Data de inceput" name="starting_date" as={Datepicker} autoFocus />
+            <Fieldset name="starting_date" label="Data de început">
+              <Field placeholder="Data de început" name="starting_date" as={Datepicker} autoFocus />
             </Fieldset>
             <Fieldset name="period" label="Perioada">
               <Field placeholder="Perioada" name="period" as={Input} autoFocus />
             </Fieldset>
           </div>
-          <Fieldset name="price" label="Pret">
-            <Field placeholder="Pret" name="price" as={Input} autoFocus />
+          <Fieldset name="price" label="Preț">
+            <Field placeholder="Preț" name="price" as={Input} autoFocus />
           </Fieldset>
           <Submit className="button full primary">Adaugă</Submit>
         </Form>

@@ -30,8 +30,8 @@ const SportsTable = () => {
         <thead>
           <th>#</th>
           <th>Sport</th>
-          <th>Manager sectie</th>
-          <th>Data infiintarii</th>
+          <th>Manager secție</th>
+          <th>Data înființării</th>
           <th></th>
         </thead>
         <tbody>{data?.pages.map(renderSport)}</tbody>
