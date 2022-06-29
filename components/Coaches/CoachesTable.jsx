@@ -10,8 +10,8 @@ let euro = Intl.NumberFormat("en-IN", {
 
 const CoachesTable = () => {
   const { data } = useQuery(`/coaches`);
-
-  const renderCoach = ({_id, first_name, last_name, email, coach_category, salary }, index) => {
+  const renderCoach = ({ _id, first_name, last_name, email, coach_category, salary }, index) => {
+    
     return (
       <tr key={`player-${first_name}-${last_name}`}>
         <td>{index + 1}</td>
@@ -28,10 +28,13 @@ const CoachesTable = () => {
         </td>
       </tr>
     );
+    
   };
 
   return (
     <div>
+
+      <h4 className='mb-4'> Au fost gasiti {data?.pageParams.count} antrenori în baza de date </h4>
       <table>
         <thead>
           <th>#</th>

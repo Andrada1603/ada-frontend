@@ -25,6 +25,7 @@ const AreasTable = () => {
 
   return (
     <div>
+      <h4 className='mb-4'> Au fost gasite {data?.pageParams.count} săli în baza de date </h4>
       <table>
         <thead>
           <th>#</th>

@@ -19,11 +19,11 @@ const LoginForm = () => {
     >
       <Form className="space-y-4">
         <Fieldset name="email" label="Email">
-          <Field id="email" name="Email" as={Email} autoFocus />
+          <Field id="email" name="email" as={Email} autoFocus />
         </Fieldset>
 
         <Fieldset name="password" label="Parola">
-          <Field id="password" name="Parola" as={Password} />
+          <Field id="password" name="password" as={Password} />
         </Fieldset>
 
         <Submit className="button full primary">Autentificare</Submit>

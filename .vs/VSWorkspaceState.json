@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\models",
-    "\\pages"
+    "\\components"
   ],
-  "SelectedNode": "\\models\\match.js",
+  "SelectedNode": "\\components\\Lessons",
   "PreviewInSolutionExplorer": false
 }

@@ -30,6 +30,7 @@ const PlayersTable = () => {
 
   return (
     <div>
+      <h4 className='mb-4'> Au fost gasiti {data?.pageParams.count} jucători în baza de date </h4>
       <table>
         <thead>
           <th>#</th>

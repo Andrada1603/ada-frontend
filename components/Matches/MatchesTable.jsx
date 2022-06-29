@@ -32,6 +32,7 @@ const MatchesTable = () => {
 
   return (
     <div>
+      <h4 className='mb-4'> Au fost gasite {data?.pageParams.count} meciuri în baza de date </h4>
       <table>
         <thead>
           <th>#</th>
