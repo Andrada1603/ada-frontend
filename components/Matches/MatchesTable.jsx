@@ -6,7 +6,7 @@ import DeleteRow from '../DeleteRow';
 const MatchesTable = () => {
   const { data } = useQuery(`/matches`);
 
-  const renderMatch = ({_id, player1, player2, date, location, match_type }, index) => {
+  const renderMatch = ({_id, player1, player2, date, location, sport }, index) => {
     return (
       <tr key={`player1-${player1}player2-${player2}`}>
         <td>{index + 1}</td>
@@ -22,7 +22,7 @@ const MatchesTable = () => {
         </td>
         <td>{format(new Date(date), 'dd-MM-yyyy')} </td>
         <td>{location.address}</td>
-        <td>{match_type}</td>
+        <td>{sport}</td>
         <td className="text-center py-0">
           <DeleteRow id={_id} action={deleteMatch} />
         </td>
@@ -39,7 +39,7 @@ const MatchesTable = () => {
           <th>Echipa vizitator</th>
           <th>Data</th>
           <th>Locatie</th>
-          <th>Campionatul</th>
+          <th>Sportul</th>
           <th></th>
         </thead>
         <tbody>{data?.pages.map(renderMatch)}</tbody>
