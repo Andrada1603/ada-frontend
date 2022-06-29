@@ -4,7 +4,7 @@ import { MyProfile } from '../../examples/components';
 
 const Page = () => {
   return (
-    <Layout title="My profile">
+    <Layout title="Profilul meu">
       <MyProfile />
     </Layout>
   );

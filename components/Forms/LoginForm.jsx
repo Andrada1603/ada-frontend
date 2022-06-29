@@ -18,15 +18,15 @@ const LoginForm = () => {
       onSubmit={handleSubmit}
     >
       <Form className="space-y-4">
-        <Fieldset name="email" label="Your email">
-          <Field id="email" name="email" as={Email} autoFocus />
+        <Fieldset name="email" label="Email">
+          <Field id="email" name="Email" as={Email} autoFocus />
         </Fieldset>
 
-        <Fieldset name="password" label="Your password">
-          <Field id="password" name="password" as={Password} />
+        <Fieldset name="password" label="Parola">
+          <Field id="password" name="Parola" as={Password} />
         </Fieldset>
 
-        <Submit className="button full primary">Login</Submit>
+        <Submit className="button full primary">Autentificare</Submit>
         <Recaptcha ref={ref} />
       </Form>
     </Formik>
