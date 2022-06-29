@@ -1,4 +1,5 @@
 import AddPlayerForm from './AddPlayerForm';
+import IndividualPlayer from './IndividualPlayer';
 import PlayersTable from './PlayersTable';
 
-export { AddPlayerForm, PlayersTable };
+export { AddPlayerForm, IndividualPlayer, PlayersTable };
