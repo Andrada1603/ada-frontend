@@ -10,7 +10,6 @@ const IndexPage = () => (
         <Link href="/forgot">
           <a className="text-gray-600">Ai uitat parola?</a>
         </Link>
-            <a className="text-gray-600">Termeni și condiții</a>
       </div>
       <div className="mt-2">
         <Link href="/signup">
