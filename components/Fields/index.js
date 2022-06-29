@@ -16,6 +16,7 @@ import RadioContext from './RadioContext';
 import RadioGroup from './RadioGroup';
 import Recaptcha from './Recaptcha';
 import Select from './Select';
+import SportSelect from './SportSelect';
 import Submit from './Submit';
 import Textarea from './Textarea';
 
@@ -38,6 +39,7 @@ export {
   RadioGroup,
   Recaptcha,
   Select,
+  SportSelect,
   Submit,
   Textarea,
 };

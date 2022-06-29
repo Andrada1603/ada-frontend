@@ -32,7 +32,7 @@ const AddPlayerForm = () => {
       >
         <Form className="flex gap-4 flex-col">
           <div className="grid grid-cols-2 gap-4">
-            <Fieldset name="last_name" label="Nume de familie">
+            <Fieldset name="last_name" label="Nume de familie" autoFocus>
               <Field
                 id="last_name"
                 placeholder="Nume de familie"
@@ -42,7 +42,7 @@ const AddPlayerForm = () => {
               />
             </Fieldset>
             <Fieldset name="first_name" label="Prenume">
-              <Field id="first_name" placeholder="Prenume" name="first_name" as={Input} autoFocus />
+              <Field id="first_name" placeholder="Prenume" name="first_name" as={Input} />
             </Fieldset>
           </div>
           <div className="grid grid-cols-2 gap-4">

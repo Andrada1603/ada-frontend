@@ -1,9 +1,10 @@
 import { Formik, Form, Field } from 'formik';
-import { Input } from '../Fields';
+import { Input, Select } from '../Fields';
 import { Datepicker, Fieldset, Submit } from '../Formik';
 import { validationSchema, initialValues } from '../../models/coach';
 import { createCoach } from '../../api/coach';
 import { router, toaster } from '../../lib';
+import { coachCategories } from '../../data';
 
 const AddCoachForm = () => {
   const handleSubmit = async (data) => {
@@ -15,6 +16,12 @@ const AddCoachForm = () => {
       toaster.error('Antrenorul nu a putut fi creat.');
     }
   };
+
+  const showCoachCategory = ({ name, value }) => (
+    <option value={value} key={`coach-cat-${value}`}>
+      {name}
+    </option>
+  );
 
   return (
     <div className="form-container">
@@ -50,7 +57,9 @@ const AddCoachForm = () => {
             </Fieldset>
           </div>
           <Fieldset name="coach_category" label="Categorie">
-            <Field placeholder="Categorie" name="coach_category" as={Input} />
+            <Field placeholder="Categorie" name="coach_category" as={Select}>
+              {coachCategories.map(showCoachCategory)}
+            </Field>
           </Fieldset>
           <Fieldset name="salary" label="Salariu">
             <Field placeholder="Salariu" name="salary" as={Input} />

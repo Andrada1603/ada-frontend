@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\components\\Abonaments",
-    "\\components\\Areas",
-    "\\components\\Coaches",
-    "\\css"
+    "\\components"
   ],
-  "SelectedNode": "\\css\\buttons.css",
+  "SelectedNode": "\\components\\Coaches",
   "PreviewInSolutionExplorer": false
 }

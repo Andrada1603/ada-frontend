@@ -2,6 +2,12 @@ import { deleteCoach } from '../../api/coach';
 import { useQuery } from '../../hooks';
 import DeleteRow from '../DeleteRow';
 
+let euro = Intl.NumberFormat("en-IN", {
+  style: "currency",
+  currency: "LEI",
+
+});
+
 const CoachesTable = () => {
   const { data } = useQuery(`/coaches`);
 
@@ -16,7 +22,7 @@ const CoachesTable = () => {
         </td>
         <td>{email}</td>
         <td>{coach_category}</td>
-        <td>{salary} LEI</td>
+        <td>{euro.format(salary)}</td>
         <td className="text-center py-0">
           <DeleteRow id={_id} action={deleteCoach} />
         </td>

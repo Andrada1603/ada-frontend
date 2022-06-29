@@ -1,5 +1,13 @@
 const playerCategories = [
   {
+    name: 'Fara categorie',
+    value: 'FC',
+  },
+  {
+    name: 'Categoria III',
+    value: 'III',
+  },
+  {
     name: 'Categoria II',
     value: 'II',
   },
@@ -26,6 +34,11 @@ const playerCategories = [
   {
     name: 'Mare Maestru',
     value: 'GM',
+  },
+
+  {
+    name: 'Alta',
+    value: 'alta',
   },
 ];
 
