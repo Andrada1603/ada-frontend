@@ -6,8 +6,7 @@ import DeleteRow from '../DeleteRow';
 const LessonsTable = () => {
   const { data } = useQuery(`/lessons`);
 
-  const renderLesson = ({ _id, name, coach, date, location }, index) => {
-    console.log(coach);
+  const renderLesson = ({ _id, name, coach, date, location, sport }, index) => {
     return (
       <tr key={`area-${name}`}>
         <td>{index + 1}</td>
@@ -19,6 +18,7 @@ const LessonsTable = () => {
         <td>{coach.last_name}, {coach.first_name} </td>
         <td>{format(new Date(date), 'dd-MM-yyyy')} </td>
         <td>{location.address}</td>
+        <td>{sport} </td>
         <td className="text-center py-0">
           <DeleteRow id={_id} action={deleteLesson} />
         </td>
@@ -36,6 +36,7 @@ const LessonsTable = () => {
           <th>Antrenor</th>
           <th>Data</th>
           <th>Locație</th>
+          <th>Sport</th>
           <th></th>
         </thead>
         <tbody>{data?.pages.map(renderLesson)}</tbody>
