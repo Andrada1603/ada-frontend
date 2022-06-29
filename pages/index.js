@@ -17,6 +17,11 @@ const IndexPage = () => (
             <span className="mr-1">Nu ești membru încă?</span>
             <span className="text-blue-800 font-bold">Crează cont</span>
           </a>
+        </Link>    
+      </div>
+      <div className="mt-2">
+      <Link href="/terms_conditions">
+        <a className="text-gray-600 hover:underline">Termeni și condiții</a>
         </Link>
       </div>
     </div>
