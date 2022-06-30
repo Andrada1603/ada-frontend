@@ -1,10 +1,11 @@
 import { Formik, Form, Field } from 'formik';
-import { Input, Select } from '../Fields';
+import { Select } from '../Fields';
 import { Datepicker, Fieldset, Submit } from '../Formik';
 import { validationSchema, initialValues } from '../../models/abonament';
 import { createAbonament } from '../../api/abonament';
 import { router, toaster } from '../../lib';
 import { abonamentTypes } from '../../data';
+import AbonamentPrice from './AbonamentPrice';
 
 const AddAbonamentForm = () => {
   const handleSubmit = async (data) => {
@@ -73,9 +74,10 @@ const AddAbonamentForm = () => {
               </Field>
             </Fieldset>
           </div>
-          <Fieldset name="price" label="Preț">
-            <Field placeholder="Preț" name="price" as={Input} autoFocus />
-          </Fieldset>
+          {/* <Fieldset name="price" label="Preț">
+            <Field placeholder="Preț" name="price" as={Input} autoFocus disabled />
+          </Fieldset> */}
+          <AbonamentPrice />
           <Submit className="button full primary">Adaugă</Submit>
         </Form>
       </Formik>
