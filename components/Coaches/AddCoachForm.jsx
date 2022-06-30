@@ -45,7 +45,7 @@ const AddCoachForm = () => {
               <Field id="first_name"
                 placeholder="Prenume"
                 name="first_name"
-                as={Input} autoFocus />
+                as={Input} />
             </Fieldset>
           </div>
           <div className="grid grid-cols-2 gap-4">

@@ -37,7 +37,7 @@ const AddSportForm = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Fieldset name="manager_name" label="Numele managerului">
-              <Field id="manager_name" placeholder="Numele managerului" name="manager_name" as={Input} autoFocus />
+              <Field id="manager_name" placeholder="Numele managerului" name="manager_name" as={Input}/>
             </Fieldset>
           </div>
           <div className="grid grid-cols-2 gap-4">

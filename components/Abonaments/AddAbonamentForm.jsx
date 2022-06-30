@@ -55,7 +55,7 @@ const AddAbonamentForm = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Fieldset name="starting_date" label="Data de început">
-              <Field placeholder="Data de început" name="starting_date" as={Datepicker} autoFocus />
+              <Field placeholder="Data de început" name="starting_date" as={Datepicker}/>
             </Fieldset>
             <Fieldset name="period" label="Perioada">
               <Field
