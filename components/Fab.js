@@ -12,7 +12,7 @@ const Fab = ({ href, icon = 'fa fa-plus-circle', title }) => {
         <a
           className={`menu-item px-8 py-2 cursor-pointer no-underline fixed
             z-90
-            bottom-8
+            top-8
             right-8
             drop-shadow-lg
             flex justify-center items-center
