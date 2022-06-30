@@ -1,4 +1,4 @@
-import coachCategories from './coach_categories';
+import coachCategories from './coach-categories';
 import countries from './countries';
 import pages from './pages';
 import playerCategories from './player-categories';
