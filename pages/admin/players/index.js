@@ -1,5 +1,5 @@
 import { checkAuth, withAuth } from '../../../auth';
-import { Fab, Menu, MenuButton, Tooltip } from '../../../components';
+import { Menu, MenuButton, Tooltip } from '../../../components';
 import { PlayersTable } from '../../../components/Players';
 
 const Page = () => (
