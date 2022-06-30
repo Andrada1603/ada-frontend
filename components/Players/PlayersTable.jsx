@@ -1,17 +1,19 @@
 import { useRouter } from 'next/router';
 import { deletePlayer } from '../../api/player';
-import { useQuery } from '../../hooks';
+import { useInfiniteQuery } from '../../hooks';
+import Button from '../Button';
 import DeleteRow from '../DeleteRow';
+import EditRow from '../EditRow';
 
 const PlayersTable = () => {
   const router = useRouter();
-  const { data } = useQuery(`/players`);
+  const { data } = useInfiniteQuery(`/players`);
 
   const renderPlayer = ({ _id, first_name, last_name, birthday, email, category }, index) => {
-    const handleClick = (id) => router.push(`/admin/players/${id}`)
+    const handleClick = (id) => router.push(`/admin/players/${id}`);
 
     return (
-      <tr key={`player-${first_name}-${last_name}`} onClick={() => handleClick(_id)}>
+      <tr key={`player-${_id}-${first_name}-${last_name}`} onClick={() => handleClick(_id)}>
         <td>{index + 1}</td>
         <td>
           <strong>
@@ -22,7 +24,10 @@ const PlayersTable = () => {
         <td>{category}</td>
         <td>{email}</td>
         <td className="text-center py-0">
-          <DeleteRow id={_id} action={deletePlayer} />
+          <div className="flex gap-4 items-center">
+            <DeleteRow id={_id} action={deletePlayer} />
+            <EditRow id={_id} />
+          </div>
         </td>
       </tr>
     );
@@ -30,7 +35,16 @@ const PlayersTable = () => {
 
   return (
     <div>
-      <h4 className='mb-4'> Au fost gasiti {data?.pageParams.count} jucători în baza de date </h4>
+      <div className="mb-6 flex justify-between w-full">
+        <Button className="button full primary">
+          <i className="fa fa-plus mr-4" />
+          Adaugă jucător
+        </Button>
+        <Button className="button full secondary">
+          <i className="fa fa-download mr-4" />
+          Descarcă datele
+        </Button>
+      </div>
       <table>
         <thead>
           <th>#</th>
@@ -40,8 +54,10 @@ const PlayersTable = () => {
           <th>Email</th>
           <th></th>
         </thead>
-        <tbody>{data?.pages.map(renderPlayer)}</tbody>
+        <tbody>{data?.pages[0].map(renderPlayer)}</tbody>
       </table>
+      <Button className="button full secondary my-4">Incarca mai mult</Button>
+      {/* <h4 className="my-4"> Au fost gasiti {data?.pageParams.count} jucători în baza de date.</h4> */}
     </div>
   );
 };

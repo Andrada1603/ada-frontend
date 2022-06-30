@@ -27,7 +27,7 @@ const DeleteRow = ({ action, id }) => {
 
   return (
     <>
-      <i className="fa fa-trash invisible" onClick={show} />
+      <i className="fa fa-trash invisible hover:text-red-500" onClick={show} />
       <AreYouSure isOpen={isOpen} hide={hide} iAmSure={iAmSure}>
         Atenție! Această acțiune nu este reversibilă.
       </AreYouSure>
