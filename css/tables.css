@@ -34,9 +34,9 @@ tbody > tr:hover i {
   visibility: visible !important;
 }
 
-tbody > tr i:hover {
+/* tbody > tr i.fa-trash:hover {
   color: red;
-}
+} */
 
 tr:nth-child(odd) {
   background: #C5E0FC;

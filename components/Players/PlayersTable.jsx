@@ -3,6 +3,7 @@ import { deletePlayer } from '../../api/player';
 import { useInfiniteQuery } from '../../hooks';
 import Button from '../Button';
 import DeleteRow from '../DeleteRow';
+import EditRow from '../EditRow';
 
 const PlayersTable = () => {
   const router = useRouter();
@@ -23,7 +24,10 @@ const PlayersTable = () => {
         <td>{category}</td>
         <td>{email}</td>
         <td className="text-center py-0">
-          <DeleteRow id={_id} action={deletePlayer} />
+          <div className="flex gap-4 items-center">
+            <DeleteRow id={_id} action={deletePlayer} />
+            <EditRow id={_id} />
+          </div>
         </td>
       </tr>
     );
@@ -52,9 +56,7 @@ const PlayersTable = () => {
         </thead>
         <tbody>{data?.pages[0].map(renderPlayer)}</tbody>
       </table>
-      <Button className="button full secondary my-4">
-        Incarca mai mult
-      </Button>
+      <Button className="button full secondary my-4">Incarca mai mult</Button>
       {/* <h4 className="my-4"> Au fost gasiti {data?.pageParams.count} jucători în baza de date.</h4> */}
     </div>
   );
