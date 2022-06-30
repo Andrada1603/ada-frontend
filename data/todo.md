@@ -11,4 +11,5 @@
 9. Page for joining a lesson
 10. Loading states for all elements, including tables and universal dropdowns
 11. Dashboard page
-12. Add sport match and lessons in API
+12. Add sport atch and lessons in API
+13. Add "active" to abonaments table. replace "duration"
