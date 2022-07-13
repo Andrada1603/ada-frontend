@@ -9,8 +9,9 @@ const Menu = () => {
       </MenuGroup>
     ) : (
       <MenuItem key={name} href={href} level={1}>
-        {name}
-      </MenuItem>
+          {name}
+        </MenuItem>
+
     );
   };
 

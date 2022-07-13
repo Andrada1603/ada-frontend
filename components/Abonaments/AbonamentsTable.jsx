@@ -1,6 +1,7 @@
 import { deleteAbonament } from '../../api/abonament';
 import { useQuery } from '../../hooks';
 import { add, format } from 'date-fns';
+import Button from '../Button';
 import DeleteRow from '../DeleteRow';
 
 const AbonamentsTable = () => {
@@ -33,6 +34,16 @@ const AbonamentsTable = () => {
 
   return (
     <div>
+      <div className="mb-6 flex justify-between w-full">
+        <Button className="button full primary">
+          <i className="fa fa-plus mr-4" />
+          Adaugă abonament
+        </Button>
+        <Button className="button full secondary">
+          <i className="fa fa-download mr-4" />
+          Descarcă datele
+        </Button>
+      </div>
       <h4 className="mb-4"> Au fost gasite {data?.pageParams.count} abonamente în baza de date</h4>
       <table>
         <thead>
