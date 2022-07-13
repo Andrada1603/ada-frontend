@@ -15,7 +15,6 @@ const Page = () => (
       </div>
       <div>
         <AbonamentsTable />
-        <Fab title="Adaugă abonament" href="/admin/abonaments/add" />
       </div>
     </main>
   </div>

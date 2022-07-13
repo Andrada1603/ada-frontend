@@ -15,7 +15,6 @@ const Page = () => (
       </div>
       <div>
         <MatchesTable />
-        <Fab title="Adaugă meci" href="/admin/matches/add" />
       </div>
     </main>
   </div>

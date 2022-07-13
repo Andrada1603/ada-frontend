@@ -1,6 +1,7 @@
 import { deleteArea } from '../../api/area';
 import { useQuery } from '../../hooks';
 import DeleteRow from '../DeleteRow';
+import Button from '../Button';
 
 const AreasTable = () => {
   const { data } = useQuery(`/areas`);
@@ -25,6 +26,16 @@ const AreasTable = () => {
 
   return (
     <div>
+      <div className="mb-6 flex justify-between w-full">
+        <Button className="button full primary" href="/admin/areas/add">
+          <i className="fa fa-plus mr-4" />
+          Adaugă sală de antrenament
+        </Button>
+        <Button className="button full secondary">
+          <i className="fa fa-download mr-4" />
+          Descarcă datele
+        </Button>
+      </div>
       <h4 className='mb-4'> Au fost gasite {data?.pageParams.count} săli în baza de date </h4>
       <table>
         <thead>

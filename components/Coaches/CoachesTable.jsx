@@ -1,6 +1,7 @@
 import { deleteCoach } from '../../api/coach';
 import { useQuery } from '../../hooks';
 import DeleteRow from '../DeleteRow';
+import Button from '../Button';
 
 let euro = Intl.NumberFormat("en-IN", {
   style: "currency",
@@ -33,7 +34,16 @@ const CoachesTable = () => {
 
   return (
     <div>
-
+        <div className="mb-6 flex justify-between w-full">
+          <Button className="button full primary" href="/admin/coaches/add">
+            <i className="fa fa-plus mr-4" />
+            Adaugă antrenor
+          </Button>
+          <Button className="button full secondary">
+            <i className="fa fa-download mr-4" />
+            Descarcă datele
+          </Button>
+        </div>
       <h4 className='mb-4'> Au fost gasiti {data?.pageParams.count} antrenori în baza de date </h4>
       <table>
         <thead>

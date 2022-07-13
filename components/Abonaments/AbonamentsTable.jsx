@@ -35,7 +35,7 @@ const AbonamentsTable = () => {
   return (
     <div>
       <div className="mb-6 flex justify-between w-full">
-        <Button className="button full primary">
+        <Button className="button full primary" href="/admin/abonaments/add">
           <i className="fa fa-plus mr-4" />
           Adaugă abonament
         </Button>

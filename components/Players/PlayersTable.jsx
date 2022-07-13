@@ -36,7 +36,7 @@ const PlayersTable = () => {
   return (
     <div>
       <div className="mb-6 flex justify-between w-full">
-        <Button className="button full primary">
+        <Button className="button full primary" href="/admin/players/add">
           <i className="fa fa-plus mr-4" />
           Adaugă jucător
         </Button>
@@ -45,6 +45,7 @@ const PlayersTable = () => {
           Descarcă datele
         </Button>
       </div>
+      <h4 className='mb-4'> Au fost găsiți {data?.pageParams.count} jucători în baza de date </h4>
       <table>
         <thead>
           <th>#</th>

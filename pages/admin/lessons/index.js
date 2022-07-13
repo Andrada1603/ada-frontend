@@ -15,7 +15,6 @@ const Page = () => (
       </div>
       <div>
         <LessonsTable />
-        <Fab title="Adaugă lecție" href="/admin/lessons/add" />
       </div>
     </main>
   </div>

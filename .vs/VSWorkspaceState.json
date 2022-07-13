@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\components",
-    "\\components\\Abonaments",
-    "\\components\\Dashboard",
-    "\\components\\Players",
-    "\\data"
+    "\\public",
+    "\\public\\images"
   ],
-  "SelectedNode": "\\components\\Players\\PlayerInfo.jsx",
+  "SelectedNode": "\\components",
   "PreviewInSolutionExplorer": false
 }

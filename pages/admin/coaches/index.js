@@ -14,8 +14,7 @@ const Page = () => (
         <MenuButton />
       </div>
       <div>
-        <CoachesTable />
-        <Fab title="Adaugă antrenor" href="/admin/coaches/add" />
+       <CoachesTable />
       </div>
     </main>
   </div>
