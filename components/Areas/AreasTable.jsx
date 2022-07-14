@@ -2,6 +2,7 @@ import { deleteArea } from '../../api/area';
 import { useQuery } from '../../hooks';
 import DeleteRow from '../DeleteRow';
 import Button from '../Button';
+import ReactToExcel from 'react-html-table-to-excel';
 
 const AreasTable = () => {
   const { data } = useQuery(`/areas`);
@@ -31,13 +32,18 @@ const AreasTable = () => {
           <i className="fa fa-plus mr-4" />
           Adaugă sală de antrenament
         </Button>
-        <Button className="button full secondary">
+        <Button className="button full secondary" id='downloadButton'>
           <i className="fa fa-download mr-4" />
-          Descarcă datele
+          <ReactToExcel
+            table="areasTable"
+            filename="Sali_de_antrenament"
+            sheet="sheet1"
+            buttonText="Descarca datele">
+          </ReactToExcel>
         </Button>
       </div>
       <h4 className='mb-4'> Au fost gasite {data?.pageParams.count} săli în baza de date </h4>
-      <table>
+      <table id="areasTable">
         <thead>
           <th>#</th>
           <th>Denumire</th>

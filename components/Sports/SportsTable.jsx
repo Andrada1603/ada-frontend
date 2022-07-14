@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { useQuery } from '../../hooks';
 import DeleteRow from '../DeleteRow';
 import Button from '../Button';
+import ReactToExcel from 'react-html-table-to-excel';
 
 const SportsTable = () => {
   const { data } = useQuery(`/sports`);
@@ -31,14 +32,19 @@ const SportsTable = () => {
       <Button className="button full primary" href="/admin/sports/add">
         <i className="fa fa-plus mr-4" />
         Adaugă sport
-      </Button>
-      <Button className="button full secondary">
-        <i className="fa fa-download mr-4" />
-        Descarcă datele
+        </Button>
+        <Button className="button full secondary" id='downloadButton'>
+          <i className="fa fa-download mr-4" />
+          <ReactToExcel
+            table="sportsTable"
+            filename="Sectii_sportive"
+            sheet="sheet1"
+            buttonText="Descarca datele">
+          </ReactToExcel>
         </Button>
        </div>
       <h4 className='mb-4'> Au fost gasite {data?.pageParams.count} sporturi în baza de date </h4>
-      <table>
+      <table id="sportsTable">
         <thead>
           <th>#</th>
           <th>Sport</th>

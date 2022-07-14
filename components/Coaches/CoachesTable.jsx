@@ -2,6 +2,7 @@ import { deleteCoach } from '../../api/coach';
 import { useQuery } from '../../hooks';
 import DeleteRow from '../DeleteRow';
 import Button from '../Button';
+import ReactToExcel from 'react-html-table-to-excel';
 
 let euro = Intl.NumberFormat("en-IN", {
   style: "currency",
@@ -38,14 +39,19 @@ const CoachesTable = () => {
           <Button className="button full primary" href="/admin/coaches/add">
             <i className="fa fa-plus mr-4" />
             Adaugă antrenor
-          </Button>
-          <Button className="button full secondary">
-            <i className="fa fa-download mr-4" />
-            Descarcă datele
-          </Button>
+        </Button>
+        <Button className="button full secondary">
+          <i className="fa fa-download mr-4" />
+          <ReactToExcel
+            table="coachesTable"
+            filename="Antrenori"
+            sheet="sheet1"
+            buttonText="Descarca datele">
+          </ReactToExcel>
+        </Button>
         </div>
       <h4 className='mb-4'> Au fost gasiti {data?.pageParams.count} antrenori în baza de date </h4>
-      <table>
+      <table id="coachesTable">
         <thead>
           <th>#</th>
           <th>Nume</th>

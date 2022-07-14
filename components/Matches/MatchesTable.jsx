@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { useQuery } from '../../hooks';
 import DeleteRow from '../DeleteRow';
 import Button from '../Button';
+import ReactToExcel from 'react-html-table-to-excel';
 
 const MatchesTable = () => {
   const { data } = useQuery(`/matches`);
@@ -38,13 +39,18 @@ const MatchesTable = () => {
           <i className="fa fa-plus mr-4" />
           Adaugă meci
         </Button>
-        <Button className="button full secondary">
+        <Button className="button full secondary" id='downloadButton'>
           <i className="fa fa-download mr-4" />
-          Descarcă datele
+          <ReactToExcel
+            table="matchesTable"
+            filename="Meciuri"
+            sheet="sheet1"
+            buttonText="Descarca datele">
+          </ReactToExcel>
         </Button>
       </div>
       <h4 className='mb-4'> Au fost gasite {data?.pageParams.count} meciuri în baza de date </h4>
-      <table>
+      <table id="matchesTable">
         <thead>
           <th>#</th>
           <th>Echipa gazdă</th>

@@ -7,6 +7,7 @@ import { signup } from '../../api';
 import { playerCategories } from '../../data';
 
 const SignupForm = () => {
+
   const ref = useRef(null);
   const handleSubmit = async (values) => {
     await signup(ref, values);
