@@ -47,6 +47,7 @@ const AreasTable = () => {
         </thead>
         <tbody>{data?.pages.map(renderArea)}</tbody>
       </table>
+      <Button className="button full secondary my-4" href="/admin/areas/view">Vezi harta</Button>
     </div>
   );
 };
