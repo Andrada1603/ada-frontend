@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import { useQuery } from '../../hooks';
 import { DashboardCard } from '.';
@@ -7,12 +8,15 @@ const SalesByAbonamentChart = dynamic(() => import('./Charts/SalesByAbonament'),
 
 const Dashboard = () => {
   const { data } = useQuery('/dashboard');
-  const handleClick = () => router.push(`/admin/players`);
+  const router = useRouter();
+  const handleClick = () => { router.push(`/admin/players`) };
+
+  
 
   return (
     <div>
-      <div className="grid grid-cols-6 gap-4 my-6">
-        <DashboardCard icon="fa fa-person-running" title="Sportivi" onClick={() => handleClick()}>
+      <div className="grid grid-cols-6 gap-4 my-6" >
+        <DashboardCard icon="fa fa-person-running" title="Sportivi" onClick={handleClick}>
           {data?.numPlayers} sportivi înregistrați
         </DashboardCard>
         <DashboardCard icon="fa fa-person-chalkboard" title="Antrenori">
