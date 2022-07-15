@@ -9,14 +9,15 @@ const SalesByAbonamentChart = dynamic(() => import('./Charts/SalesByAbonament'),
 const Dashboard = () => {
   const { data } = useQuery('/dashboard');
   const router = useRouter();
-  const handleClick = () => { router.push(`/admin/players`) };
-
-  
 
   return (
     <div>
-      <div className="grid grid-cols-6 gap-4 my-6" >
-        <DashboardCard icon="fa fa-person-running" title="Sportivi" onClick={handleClick}>
+      <div className="grid grid-cols-6 gap-4 my-6">
+        <DashboardCard
+          icon="fa fa-person-running"
+          title="Sportivi"
+          onClick={() => router.push('/admin/players')}
+        >
           {data?.numPlayers} sportivi înregistrați
         </DashboardCard>
         <DashboardCard icon="fa fa-person-chalkboard" title="Antrenori">
