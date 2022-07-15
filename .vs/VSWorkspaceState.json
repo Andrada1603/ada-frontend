@@ -2,12 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\components",
-    "\\components\\Abonaments",
-    "\\components\\Coaches",
     "\\components\\Dashboard",
-    "\\components\\Players",
-    "\\data"
+    "\\pages"
   ],
-  "SelectedNode": "\\components\\Coaches\\index.js",
+  "SelectedNode": "\\components\\Dashboard\\Dashboard.jsx",
   "PreviewInSolutionExplorer": false
 }

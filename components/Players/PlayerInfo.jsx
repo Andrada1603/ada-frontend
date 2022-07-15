@@ -47,6 +47,14 @@ const PlayerInfo = ({ first_name, last_name, birthday, email, category, lessons,
             </div>
           </div>
         </div>
+        <div className="flex flex-col">
+          <span className='text-primary' align='left'> <strong> Lectii: </strong> </span>
+          <span align='right'> {lessons.map(lessons => <div>{lessons._id} </div>)} </span>
+        </div>
+        <div className="flex flex-col">
+          <span className='text-primary' align='left'> <strong> Meciuri: </strong> </span>
+          <span align='right'> {matches.map(matches => <div>{matches._id}</div>)} </span>
+        </div>
       </div>
 
     </>
