@@ -7,7 +7,6 @@ import ReactToExcel from 'react-html-table-to-excel';
 
 const MatchesTable = () => {
   const { data } = useQuery(`/matches`);
-  console.log({data})
 
   const renderMatch = ({_id, player1, player2, date, location, sport }, index) => {
     return (
@@ -54,8 +53,8 @@ const MatchesTable = () => {
       <table id="matchesTable">
         <thead>
           <th>#</th>
-          <th>Echipa gazdă</th>
-          <th>Echipa vizitator</th>
+          <th>Jucător 1</th>
+          <th>Jucător 2</th>
           <th>Data</th>
           <th>Locație</th>
           <th>Sportul</th>

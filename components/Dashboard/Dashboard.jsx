@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import { useQuery } from '../../hooks';
 import { DashboardCard } from '.';
+import { normalizePlayersByCat } from '../../functions';
 const LessonsAndMatchesChart = dynamic(() => import('./Charts/LessonsAndMatches'), { ssr: false });
 const PlayersByCategoryChart = dynamic(() => import('./Charts/PlayersByCategory'), { ssr: false });
 const SalesByAbonamentChart = dynamic(() => import('./Charts/SalesByAbonament'), { ssr: false });
@@ -38,7 +39,7 @@ const Dashboard = () => {
       </div>
       <div className="grid grid-cols-3 gap-4">
         <div className="p-4 bg-white">
-          <PlayersByCategoryChart />
+          <PlayersByCategoryChart data={normalizePlayersByCat(data?.playersByCat)}/>
         </div>
         <div className="p-4 bg-white">
           <LessonsAndMatchesChart />
