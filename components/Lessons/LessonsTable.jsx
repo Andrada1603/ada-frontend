@@ -20,7 +20,7 @@ const LessonsTable = () => {
         <td>{coach.last_name}, {coach.first_name} </td>
         <td>{format(new Date(date), 'dd-MM-yyyy')} </td>
         <td>{location.address}</td>
-        <td>{sport.name} </td>
+        <td>{sport?.name} </td>
         <td className="text-center py-0">
           <DeleteRow id={_id} action={deleteLesson} />
         </td>
