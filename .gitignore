@@ -4,6 +4,7 @@ NOTES.txt
 .idea
 yarn.lock
 .DS_Store
+.vs
 
 # Logs
 logs

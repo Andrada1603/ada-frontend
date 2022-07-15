@@ -14,10 +14,15 @@ const login = async (ref, data) => {
       throw new Error('Error! We cannot log you in at the moment');
     }
     store.dispatch({ type: 'SET', jwt: token });
+
     // notify user and other actions
     toaster.success('Login successful');
-    router.push('/admin');
-    // router.push('/' + role);
+    if (decoded.role === 'player') {
+      router.push('/player');
+    }
+    if (decoded.role === 'admin') {
+      router.push('/admin');
+    }
   } catch (err) {
     toaster.error(err.message);
 
