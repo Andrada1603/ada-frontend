@@ -1,7 +1,7 @@
 import { fullName } from '../../functions';
 import { format } from 'date-fns';
 
-const PlayerInfo = ({ first_name, last_name, birthday, email, category }) => {
+const PlayerInfo = ({ first_name, last_name, birthday, email, category, lessons, matches }) => {
   return (
     <>
       <div className="player-info">
