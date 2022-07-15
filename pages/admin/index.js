@@ -8,7 +8,6 @@ const Page = () => {
       <div className="bg-white rounded border border-gray-300 p-4">
         <div className="prose max-w-full">
           <h2 className="font-semibold">Clubul Sportiv Universitar A.S.E. București</h2>
-          {/* <p>This is a secured admin page. Modify it as you wish.</p> */}
         </div>
       </div>
       <Dashboard />

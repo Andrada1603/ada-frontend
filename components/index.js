@@ -6,6 +6,7 @@ import EmailMask from './EmailMask';
 import Fab from './Fab';
 import Favicon from './Favicon';
 import Layout from './Layout';
+import LayoutPlayer from './LayoutPlayer';
 import Link from './Link';
 import Loading from './Loading';
 import LoadMore from './LoadMore';
@@ -14,6 +15,7 @@ import Menu from './Menu';
 import MenuButton from './MenuButton';
 import MenuGroup from './MenuGroup';
 import MenuItem from './MenuItem';
+import MenuPlayer from './MenuPlayer';
 import Modal from './Modal';
 import NoSsr from './NoSsr';
 import OpenGraph from './OpenGraph';
@@ -42,6 +44,7 @@ export {
   Fab,
   Favicon,
   Layout,
+  LayoutPlayer,
   Link,
   Loading,
   LoadMore,
@@ -50,6 +53,7 @@ export {
   MenuButton,
   MenuGroup,
   MenuItem,
+  MenuPlayer,
   Modal,
   NoSsr,
   OpenGraph,
