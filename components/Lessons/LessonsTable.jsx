@@ -2,6 +2,8 @@ import { deleteLesson } from '../../api/lesson';
 import { useQuery } from '../../hooks';
 import { format } from 'date-fns';
 import DeleteRow from '../DeleteRow';
+import Button from '../Button';
+import ReactToExcel from 'react-html-table-to-excel';
 
 const LessonsTable = () => {
   const { data } = useQuery(`/lessons`);
@@ -18,7 +20,7 @@ const LessonsTable = () => {
         <td>{coach.last_name}, {coach.first_name} </td>
         <td>{format(new Date(date), 'dd-MM-yyyy')} </td>
         <td>{location.address}</td>
-        <td>{sport} </td>
+        <td>{sport.name} </td>
         <td className="text-center py-0">
           <DeleteRow id={_id} action={deleteLesson} />
         </td>
@@ -28,8 +30,23 @@ const LessonsTable = () => {
 
   return (
     <div>
+      <div className="mb-6 flex justify-between w-full">
+        <Button className="button full primary" href="/admin/lessons/add">
+          <i className="fa fa-plus mr-4" />
+          Adaugă lecție
+        </Button>
+        <Button className="button full secondary" id='downloadButton'>
+          <i className="fa fa-download mr-4" />
+          <ReactToExcel
+            table="lessonsTable"
+            filename="Lectii"
+            sheet="sheet1"
+            buttonText="Descarca datele">
+          </ReactToExcel>
+        </Button>
+      </div>
       <h4 className='mb-4'> Au fost gasite {data?.pageParams.count} lecții în baza de date </h4>
-      <table>
+      <table id="lessonsTable">
         <thead>
           <th>#</th>
           <th>Titlu lecție</th>

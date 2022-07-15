@@ -18,7 +18,7 @@ const MenuGroup = ({ name, items, children, level }) => {
     <>
       <div
         className={classnames(
-          'flex items-center py-2 text-gray-900 hover:bg-gray-100 cursor-pointer',
+          'flex items-center py-2 text-gray-900 hover:bg-blue-100 cursor-pointer',
           level === 1 ? 'pl-8' : 'pl-12'
         )}
         onClick={toggle}

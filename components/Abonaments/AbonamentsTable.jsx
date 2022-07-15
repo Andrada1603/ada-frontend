@@ -1,7 +1,9 @@
 import { deleteAbonament } from '../../api/abonament';
 import { useQuery } from '../../hooks';
 import { add, format } from 'date-fns';
+import Button from '../Button';
 import DeleteRow from '../DeleteRow';
+import ReactToExcel from 'react-html-table-to-excel';
 
 const AbonamentsTable = () => {
   const { data } = useQuery(`/abonaments`);
@@ -31,10 +33,28 @@ const AbonamentsTable = () => {
     );
   };
 
+
+
   return (
     <div>
+      <div className="mb-6 flex justify-between w-full">
+        <Button className="button full primary" href="/admin/abonaments/add">
+          <i className="fa fa-plus mr-4" />
+          Adaugă abonament
+        </Button>
+ 
+        <Button className="button full secondary" id='downloadButton'>
+          <i className="fa fa-download mr-4" />
+          <ReactToExcel
+            table="abonamentsTable"
+            filename="Abonamente"
+            sheet="sheet1"
+            buttonText="Descarca datele">
+          </ReactToExcel>
+        </Button>
+      </div>
       <h4 className="mb-4"> Au fost gasite {data?.pageParams.count} abonamente în baza de date</h4>
-      <table>
+      <table id="abonamentsTable">
         <thead>
           <th>#</th>
           <th>Tip abonament</th>

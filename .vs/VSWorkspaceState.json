@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\components",
-    "\\components\\Lessons",
     "\\components\\Matches"
   ],
-  "SelectedNode": "\\components\\Lessons\\LessonsTable.jsx",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
