@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\components\\Matches"
+    "\\components",
+    "\\components\\Abonaments",
+    "\\components\\Coaches",
+    "\\components\\Dashboard",
+    "\\components\\Players",
+    "\\data"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\components\\Coaches\\index.js",
   "PreviewInSolutionExplorer": false
 }
