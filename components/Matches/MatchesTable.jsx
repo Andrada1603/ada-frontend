@@ -7,6 +7,7 @@ import ReactToExcel from 'react-html-table-to-excel';
 
 const MatchesTable = () => {
   const { data } = useQuery(`/matches`);
+  console.log({data})
 
   const renderMatch = ({_id, player1, player2, date, location, sport }, index) => {
     return (
@@ -24,7 +25,7 @@ const MatchesTable = () => {
         </td>
         <td>{format(new Date(date), 'dd-MM-yyyy')} </td>
         <td>{location.address}</td>
-        <td>{sport}</td>
+        <td>{sport?.name}</td>
         <td className="text-center py-0">
           <DeleteRow id={_id} action={deleteMatch} />
         </td>
