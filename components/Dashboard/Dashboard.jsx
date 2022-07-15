@@ -21,16 +21,16 @@ const Dashboard = () => {
         >
           {data?.numPlayers} sportivi înregistrați
         </DashboardCard>
-        <DashboardCard icon="fa fa-person-chalkboard" title="Antrenori">
+        <DashboardCard icon="fa fa-person-chalkboard" title="Antrenori" onClick={() => router.push('/admin/coaches')}>
           {data?.numCoaches} antrenori disponibili
         </DashboardCard>
-        <DashboardCard icon="fa fa-book" title="Lecții">
+        <DashboardCard icon="fa fa-book" title="Lecții" onClick={() => router.push('/admin/lessons')}>
           {data?.numLessons} lecții efectuate
         </DashboardCard>
-        <DashboardCard icon="fa fa-handshake" title="Meciuri">
+        <DashboardCard icon="fa fa-handshake" title="Meciuri" onClick={() => router.push('/admin/matches')}>
           {data?.numMatches} meciuri organizate
         </DashboardCard>
-        <DashboardCard icon="fa fa-ticket" title="Abonamente">
+        <DashboardCard icon="fa fa-ticket" title="Abonamente" onClick={() => router.push('/admin/abonaments')}>
           {data?.numAbonaments} abonamente vândute
         </DashboardCard>
         <DashboardCard icon="fa fa-money-bill-trend-up" title="Încasări">
