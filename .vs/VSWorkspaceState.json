@@ -3,8 +3,9 @@
     "",
     "\\components",
     "\\components\\Dashboard",
+    "\\components\\Dashboard\\Charts",
     "\\pages"
   ],
-  "SelectedNode": "\\components\\Dashboard\\Dashboard.jsx",
+  "SelectedNode": "\\components\\Dashboard\\Charts\\LessonsAndMatches.jsx",
   "PreviewInSolutionExplorer": false
 }

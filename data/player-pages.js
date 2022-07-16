@@ -1,7 +1,11 @@
 export default [
   {
     name: 'Dashboard',
-    href: '/admin',
+    href: '/player',
+  },
+  {
+    name: 'Cumpără abonament',
+    href: '/player/abonaments',
   },
   {
     name: 'Săli',
