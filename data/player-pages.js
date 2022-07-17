@@ -4,11 +4,15 @@ export default [
     href: '/player',
   },
   {
+    name: 'Programează antrenament',
+    href: '/player/lessons',
+  },
+  {
     name: 'Cumpără abonament',
     href: '/player/abonaments',
   },
   {
     name: 'Săli',
-    href: '/admin/areas',
+    href: '/player/areas',
   },
 ];

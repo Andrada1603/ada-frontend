@@ -1,17 +1,17 @@
 const abonamentTypes = [
   {
     name: 'Premium',
-    value: 'premium',
+    value: 'Premium',
     cost_per_day: 30,
   },
   {
     name: 'Medium',
-    value: 'medium',
+    value: 'Medium',
     cost_per_day: 25,
   },
   {
     name: 'Basic',
-    value: 'basic',
+    value: 'Basic',
     cost_per_day: 15,
   },
 ];

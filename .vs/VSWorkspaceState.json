@@ -2,10 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\components",
-    "\\components\\Dashboard",
-    "\\components\\Dashboard\\Charts",
-    "\\pages"
+    "\\components\\Players",
+    "\\pages",
+    "\\pages\\admin",
+    "\\pages\\admin\\players",
+    "\\pages\\player",
+    "\\pages\\player\\lessons"
   ],
-  "SelectedNode": "\\components\\Dashboard\\Charts\\LessonsAndMatches.jsx",
+  "SelectedNode": "\\pages\\player\\lessons\\index.js",
   "PreviewInSolutionExplorer": false
 }

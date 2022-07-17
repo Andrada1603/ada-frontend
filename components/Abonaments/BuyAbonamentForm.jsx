@@ -12,7 +12,7 @@ const BuyAbonamentForm = () => {
     try {
       await createAbonament(data);
       toaster.success('Abonamentul a fost cumpărat');
-      router.push('/admin/abonaments');
+      router.push('/player');
     } catch (err) {
       toaster.error('Abonamentul nu a putut fi cumpărat.');
     }

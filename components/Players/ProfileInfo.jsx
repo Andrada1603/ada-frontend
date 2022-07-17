@@ -1,7 +1,7 @@
 import { fullName } from '../../functions';
 import { format } from 'date-fns';
 
-const PlayerInfo = ({ name, email }) => {
+const PlayerInfo = ({ name, birthday, email, category, lessons, matches }) => {
   return (
     <>
       <div className="player-info">
@@ -27,7 +27,11 @@ const PlayerInfo = ({ name, email }) => {
 
               <div className="flex flex-col">
               <span className='text-primary' align='right'> <strong> Contact: </strong> </span>
-          <span align='right'> {email} </span>
+                <span align='right'> {email} </span>
+                {/*<span className='text-primary' align='right'> <strong> Data nasterii: </strong> </span>*/}
+                {/*<span align='right'> {new Date(birthday).getFullYear} </span>*/}
+                <span className='text-primary' align='right'> <strong> Categorie: </strong> </span>
+                <span align='right'> {category} </span>
               </div>
             </div>
           </div>

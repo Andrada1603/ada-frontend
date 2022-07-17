@@ -21,15 +21,6 @@ const ProfileMenu = () => {
           Logout
         </button>
       </li>
-      <li className="hover:bg-gray-100">
-        <button
-          className="px-4 py-2 text-gray-600 flex items-center no-underline"
-          onClick={goToProfilePage}
-        >
-          <i className="fa fa-user w-6"></i>
-          Profil
-        </button>
-      </li>
     </ul>
   );
 };
